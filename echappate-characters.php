@@ -5,7 +5,7 @@ if (isset($_POST['form']))
 	if (!empty($text)) //L'input avec le name = text
 	{
 		$newText = htmlspecialchars($text); //On transforme les < en &lt;, les > en &gt;
-		$newText = str_treplace('&', "&amp;", $newText); //On remplace & par &amp
+		$newText = str_treplace('&', "&amp;", $newText); //On remplace & par &amp;
 		
 		echo nl2br($newText);
 	}
@@ -19,7 +19,7 @@ if (isset($_POST['form']))
 	</head>
 	<body>
 		Taper du texte pour échapper les caractères
-		<form method="post" action="echappate-characters.php" autocomplete="off">
+		<form method="post" autocomplete="off">
 			<textarea cols="100" rows="8" name="text"></textarea>
 			<input type="submit" value="Echapper les caractères" name="form">
 		</form>
